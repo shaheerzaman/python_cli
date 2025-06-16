@@ -12,7 +12,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         print("Person's name must not be empty!", file=sys.stderr)
         return 1
 
-    print(f"Hello Peson {args.person}")
+    print(f"Hello Person {args.person}")
     return 0
 
 
