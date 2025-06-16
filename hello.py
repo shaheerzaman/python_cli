@@ -1,0 +1,20 @@
+import argparse
+import sys
+from typing import Sequence
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("person")
+    args = parser.parse_args(argv)
+
+    if args.person == "":
+        print("Person's name must not be empty!", file=sys.stderr)
+        return 1
+
+    print(f"Hello Peson {args.person}")
+    return 0
+
+
+if __name__ == "__main__":
+    exit(main())
